@@ -1,9 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 import logo from '../public/assets/color-logo-tinder.png'
+import { useContext } from "react";
+import { TinderContext } from '../context/TinderContext'
 
 const style = {
-    wrapper: `h-24 py-11 text-white flex w-screen items-center px-9 justify-between`,
+    wrapper: `flex items-center justify-between text-white h-16 px-4 py-2 w-full`,
     main: `flex items-center gap-4`,
     tinderText: `text-5xl font-semibold mr-8 cursor-pointer`,
     leftMenu: `flex gap-8 text-lg`,
@@ -15,9 +17,13 @@ const style = {
     logo: 'h-16 w-16 md:h-28 md:w-28 object-contain',
 }
 
-const Header = ({ currentAccount }) => {
+const Header = () => {
+  const { connectWallet, currentAccount, disconnectWallet } =
+    useContext(TinderContext)
   return (
-    <div  className={style.wrapper}>
+    <div  className={`${style.wrapper} ${
+      currentAccount ? 'bg-gray-900' : 'bg-transparent fixed'
+    }`}>
         <div className={style.main}>
         <Image className={style.logo} src={logo} layout='intrinsic' alt='logo' />
             <div className={style.leftMenu}>
@@ -27,7 +33,9 @@ const Header = ({ currentAccount }) => {
                 <div className={style.menuItem}>Support</div>
                 <div className={style.menuItem}>Download</div>
             </div>
-            <div className={style.rightMenu}>
+           
+        </div>
+        <div className={style.rightMenu}>
                 <div>ENGLISH</div>
                 {currentAccount ? (
           <>
@@ -57,7 +65,6 @@ const Header = ({ currentAccount }) => {
           </button>
         )}
             </div>
-        </div>
     </div>
   )
 }
