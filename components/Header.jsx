@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import logo from '../public/assets/tinder_logo_white.png'
+import logo from '../public/assets/color-logo-tinder.png'
 
 const style = {
     wrapper: `h-24 py-11 text-white flex w-screen items-center px-9 justify-between`,

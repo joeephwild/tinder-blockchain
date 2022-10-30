@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from './Card'
 import Header from './Header'
 
 
@@ -9,9 +10,11 @@ const style = {
 
 const HomePage = () => {
   return (
-    <div className={style.wrapper}>
+    <div>
         <Header />
-        <div className={style.cardsContainer}>   </div>
+        <div className={style.cardsContainer}> 
+        <Card />
+      </div>
     </div>
   )
 }
