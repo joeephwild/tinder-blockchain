@@ -5,7 +5,12 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: ({
+        "mobileImg": "url('/assets/tinderimgphone.webp')",
+        "largeImage": "url('/assets/tinderimg.webp')",
+      })
+    },
   },
   plugins: [],
 }
