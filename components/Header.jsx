@@ -14,7 +14,7 @@ const style = {
     currentAccount: `px-2 py-1 border border-gray-500 rounded-full flex items-center`,
     accountAddress: `ml-2`,
     authButton: `bg-white text-black text-red-400 font-bold text-xl px-5 text-sm py-3 rounded-full`,
-    logo: 'h-26 w-26 md:h-28 md:w-28 object-contain',
+    logo: 'h-20 w-20 md:h-28 md:w-28 object-contain',
 }
 
 const Header = () => {
