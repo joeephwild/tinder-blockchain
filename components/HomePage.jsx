@@ -10,7 +10,7 @@ const style = {
 
 const HomePage = () => {
   return (
-    <div>
+    <div className={style.wrapper}>
         <Header  />
         <div className={style.cardsContainer}> 
         <Card />

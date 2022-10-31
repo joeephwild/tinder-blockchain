@@ -18,7 +18,7 @@ const style = {
 }
 
 const Header = () => {
-  const { connectWallet, currentAccount, disconnectWallet } =
+  const {  walletConnection, currentAccount, disconnectWallet } =
     useContext(TinderContext)
   return (
     <div  className={`${style.wrapper} ${
@@ -60,7 +60,7 @@ const Header = () => {
             </button>
           </>
         ) : (
-          <button className={style.authButton} onClick={() => connectWallet()}>
+          <button className={style.authButton} onClick={() =>  walletConnection()}>
             Connect
           </button>
         )}

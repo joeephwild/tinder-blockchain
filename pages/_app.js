@@ -4,11 +4,9 @@ import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
-  <MoralisProvider>
     <TinderProvider>
      <Component {...pageProps} />
      </TinderProvider>
-  </MoralisProvider>
   )
 }
 
