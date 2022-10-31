@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import google from '../public/assets/google.svg'
 import logo from '../public/assets/tinder_logo_white.png'
+import { useContext } from 'react'
+import { TinderContext } from '../context/TinderContext'
 import { AiOutlineMenu } from 'react-icons/ai'
 import Header from './Header'
 
@@ -19,6 +21,7 @@ const style = {
 }
 
 const ConnectWallet = () => {
+  const {walletConnection } = useContext(TinderContext)
   return (
     <div className={style.wrapper}>
       <div className={style.backgroundBlur} />
@@ -26,7 +29,8 @@ const ConnectWallet = () => {
       <div className='flex flex-col '>
         <span className={style.bigText}>swipe right</span>
         <div className={style.butttonWrap}>
-        <button className={style.walletbutton}>Connect Wallet</button>
+        <button className={style.walletbutton}
+         onClick={() => walletConnection()}>Connect Wallet</button>
         <Image className={style.google} src={google} layout='intrinsic' alt='google' />
         </div>
       </div>

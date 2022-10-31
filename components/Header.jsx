@@ -8,13 +8,13 @@ const style = {
     wrapper: `flex items-center justify-between text-white h-16 px-4 py-2 w-full`,
     main: `flex items-center gap-4`,
     tinderText: `text-5xl font-semibold mr-8 cursor-pointer`,
-    leftMenu: `flex gap-8 text-lg`,
+    leftMenu: `flex hidden md:inline-flex gap-8 text-lg`,
     menuItem: `cursor-pointer hover:text-red-400 duration-300 hover:scale-110`,
     rightMenu: `flex gap-3 items-center`,
     currentAccount: `px-2 py-1 border border-gray-500 rounded-full flex items-center`,
     accountAddress: `ml-2`,
     authButton: `bg-white text-black text-red-400 font-bold text-xl px-5 text-sm py-3 rounded-full`,
-    logo: 'h-16 w-16 md:h-28 md:w-28 object-contain',
+    logo: 'h-26 w-26 md:h-28 md:w-28 object-contain',
 }
 
 const Header = () => {
